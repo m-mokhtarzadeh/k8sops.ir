@@ -2,7 +2,7 @@ baseURL = "https://itmconsult.ir/"
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"
-title = "ITMan Documents"
+title = "Kubernetes Operations Documents"
 theme = "hugo-theme-techdoc"
 themesDir = "."
 
@@ -14,7 +14,7 @@ defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
 
 [params]
-    description = "This Weblog Just Created For Document Sysadmin Challenges"
+    description = "This Weblog Just Created For Kubernetes Operations Challenges"
 
     # Analytic section
     google_analytics_id = "" # Your Google Analytics tracking id
@@ -25,7 +25,7 @@ enableMissingTranslationPlaceholders = false
     # Open Graph settings for each page are set on the front matter.
     # See https://gohugo.io/templates/internal/#open-graph
     # See https://gohugo.io/templates/internal/#twitter-cards
-    title = "ITman Documents"
+    title = "Kubernetes Operations"
     images = ["images/og-image.png"] # Open graph images are placed in `static/images`
 
     # Theme settings section
@@ -68,7 +68,7 @@ enableMissingTranslationPlaceholders = false
         weight = 1
     [[menu.main]]
         name = "About Me"
-        url = "http://mmokhtar.ir/"
+        url = "https://m-mokhtarzadeh.ir/"
         weight = 2
 
 # Markup configure section
