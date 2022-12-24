@@ -10,6 +10,6 @@ images:
 ---
 
 # Session 1 Content 
-* [Create Lab with Vagrant](https://k8sops.ir/session1/vagrant.md)
-* [Create Lab from OVA file](https://k8sops.ir/session1/ova.md)
-* [Create Lab from Scratch](https://k8sops.ir/session1/scratch.md)
+* [Create Lab with Vagrant](https://k8sops.ir/session1/vagrant/)
+* [Create Lab from OVA file](https://k8sops.ir/session1/ova/)
+* [Create Lab from Scratch](https://k8sops.ir/session1/scratch/)
