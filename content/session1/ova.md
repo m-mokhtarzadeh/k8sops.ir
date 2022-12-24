@@ -9,7 +9,7 @@ images:
 - images/kops.jpg
 ---
 
-# Create Lab with virutalbox
+[comment]: <> (# Create Lab with virutalbox)
 ### Step 0: You need virtualbox installed on your system
 Donwload virutalbox from following link.  
 [Virtualbox Download Page](https://www.virtualbox.org/wiki/Downloads)  

@@ -9,7 +9,7 @@ images:
 - images/kops.jpg
 ---
 
-# Create Lab from scratch
+[comment]: <> (# Create Lab from scratch)
 ### Step 1: Download oracle linux 8
 Download oracle linux 8 from following repository:  
 [Oracle Linux download repository](https://yum.oracle.com/oracle-linux-isos.html)

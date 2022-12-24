@@ -9,7 +9,7 @@ images:
 - images/kops.jpg
 ---
 
-# Create Lab with Vagrant
+[comment]: <> (# Create Lab with Vagrant)
 ### Step 0: You need virtualbox installed on your system
 ### Step 1: Download and install Vagrant
 You can download vagrant from hashicorp.  
