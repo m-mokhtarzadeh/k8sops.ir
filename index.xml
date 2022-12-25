@@ -4,7 +4,13 @@ Step 2: Install dependencies Install following dependencies:
 dnf install -y iproute-tc vim Step 3: Disable firewall Disable firewall:
 systemctl stop firewalld systemctl disable firewalld systemctl mask firewalld Step 4: Disable selinux Disable selinux:
 sed -i s/^SELINUX=.*$/SELINUX=disabled/ /etc/selinux/config Step 5: Update system packages Update system packages with following command:
-dnf update Step 6: Install latest version of docker Add docker repository to server package repository:</description></item><item><title>Create Lab with OVA file</title><link>https://k8sops.ir/session1/ova/</link><pubDate>Sun, 11 Dec 2022 15:26:15 +0000</pubDate><guid>https://k8sops.ir/session1/ova/</guid><description>Step 0: You need virtualbox installed on your system Donwload virutalbox from following link.
+dnf update Step 6: Install latest version of docker Add docker repository to server package repository:</description></item><item><title>Create Lab from scratch</title><link>https://k8sops.ir/session1/scratch_ubuntu/</link><pubDate>Sun, 11 Dec 2022 15:26:15 +0000</pubDate><guid>https://k8sops.ir/session1/scratch_ubuntu/</guid><description>Step 1: Download ubuntu linux 22.04 Download ubuntu 22.04 from following repository:
+Ubuntu Linux download repository
+Step 2: Install dependencies Install following dependencies:
+apt install apt install -y vim Step 3: Disable firewall Disable firewall:
+ufw disable Step 4: Disable apparmor Disable apparmor:
+systemctl stop apparmor systemctl disable apparmor systemctl mask apparmor Step 5: Update system packages Update system packages with following command:
+apt update apt upgrade Install requirements with following command:</description></item><item><title>Create Lab with OVA file</title><link>https://k8sops.ir/session1/ova/</link><pubDate>Sun, 11 Dec 2022 15:26:15 +0000</pubDate><guid>https://k8sops.ir/session1/ova/</guid><description>Step 0: You need virtualbox installed on your system Donwload virutalbox from following link.
 Virtualbox Download Page
 Step 1: Download k8sops virtualbox ova Download ova file from following link.
 Click Here to Go to Start Download</description></item><item><title>Create Lab with Vagrant</title><link>https://k8sops.ir/session1/vagrant/</link><pubDate>Sun, 11 Dec 2022 15:26:15 +0000</pubDate><guid>https://k8sops.ir/session1/vagrant/</guid><description>Step 0: You need virtualbox installed on your system Step 1: Download and install Vagrant You can download vagrant from hashicorp.
