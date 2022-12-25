@@ -3,7 +3,7 @@ date: 2022-12-11T15:26:15Z
 lastmod: 2022-12-11T15:26:15Z
 publishdate: 2022-12-11T15:26:15Z
 
-title: Create Lab from scratch
+title: Create Lab from scratch on ubuntu 22.04
 description: Kubernetes Operations Fundamentals
 images:
 - images/kops.jpg
