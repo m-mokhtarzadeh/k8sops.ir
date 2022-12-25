@@ -10,44 +10,59 @@ images:
 ---
 
 [comment]: <> (# Create Lab from scratch)
-### Step 1: Download oracle linux 8
-Download oracle linux 8 from following repository:  
-[Oracle Linux download repository](https://yum.oracle.com/oracle-linux-isos.html)
+### Step 1: Download ubuntu linux 22.04
+Download ubuntu 22.04 from following repository:  
+[Ubuntu Linux download repository](https://releases.ubuntu.com/22.04/)
 
 ### Step 2: Install dependencies
 Install following dependencies:
 ```bash
-dnf install -y iproute-tc vim
+apt install
+apt install -y vim
 ```
 
 ### Step 3: Disable firewall
 Disable firewall:  
 ```bash
-systemctl stop firewalld
-systemctl disable firewalld
-systemctl mask firewalld
+ufw disable
 ```
 
-### Step 4: Disable selinux
-Disable selinux:  
+### Step 4: Disable apparmor
+Disable apparmor:  
 ```bash
-sed -i s/^SELINUX=.*$/SELINUX=disabled/ /etc/selinux/config
+systemctl stop apparmor
+systemctl disable apparmor
+systemctl mask apparmor
 ```
 
 ### Step 5: Update system packages
 Update system packages with following command:
 ```bash
-dnf update
+apt update
+apt upgrade
+```
+Install requirements with following command:
+```bash
+sudo apt install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
 ```
 
 ### Step 6: Install latest version of docker
 Add docker repository to server package repository:
 ```bash
-sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 Install docker packages:
 ```bash
-sudo dnf install docker-ce docker-ce-cli containerd.io
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 Enable and start docker service with following commands:
 ```bash
@@ -128,21 +143,15 @@ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 ### Step 10: Install kubernetes
 Add kubernetes repository to system repository:
 ```bash
-cat << EOF > /etc/yum.repos.d/kubernetes.repo
-[kubernetes]
-name=Kubernetes
-baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-\$basearch
-enabled=1
-gpgcheck=1
-repo_gpgcheck=1
-gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
-exclude=kubelet kubeadm kubectl
-EOF
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+sudo apt update
 ```
 
 Install kubernetes packages:
 ```bash
-dnf install -y kubelet-1.23.15 kubeadm-1.23.15 kubectl-1.23.15 --disableexcludes=kubernetes
+sudo apt install -y kubelet=1.23.15-00 kubeadm=1.23.15-00 kubectl=1.23.15-00
+sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
 Enable kubernetes service:
