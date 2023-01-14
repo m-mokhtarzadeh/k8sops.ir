@@ -25,9 +25,9 @@ spec:
     - containerPort: 80
     # Following lines were added
     livenessProbe:
-    httpGet:
-      path: /
-    port: 80
+      httpGet:
+        path: /
+        port: 80
     initialDelaySeconds: 15
 ```
 Kubernetes can probe a container using one of the three mechanisms:
