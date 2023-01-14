@@ -20,14 +20,14 @@ metadata:
 spec:
   containers:
   - name: app
-	  image: k8sops-pod-example
+    image: k8sops-pod-example
     ports:
     - containerPort: 80
-		# Following lines were added
+    # Following lines were added
     livenessProbe:
-	  httpGet:
-	    path: /
-		port: 80
+    httpGet:
+      path: /
+    port: 80
     initialDelaySeconds: 15
 ```
 Kubernetes can probe a container using one of the three mechanisms:
