@@ -11,4 +11,4 @@ images:
 
 # k8sops Document
 * [Session 1](https://k8sops.ir/session1/)
-
+* [Session 6](https://k8sops.ir/session6/)

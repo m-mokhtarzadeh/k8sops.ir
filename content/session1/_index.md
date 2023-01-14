@@ -1,7 +1,7 @@
 ---
-date: 2022-12-11T15:26:15Z
-lastmod: 2022-12-11T15:26:15Z
-publishdate: 2022-12-11T15:26:15Z
+date: 2023-01-14T16:37:00Z
+lastmod: 2023-01-14T16:37:00Z
+publishdate: 2023-01-14T16:37:00Z
 
 title: Session 1
 description: Kubernetes Operations Fundamentals
